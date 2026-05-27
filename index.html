@@ -2,17 +2,18 @@
 <html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8">
-  <title>Yurii Zozulia – Senior DevOps Engineer</title>
+  <title>Tech Bird – DevOps & Platform Engineering Studio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description"
-        content="Senior DevOps Engineer specializing in Azure, Kubernetes, CI/CD, and high-availability infrastructure.">
-  <!-- Fonts (you can change if you like) -->
+        content="Tech Bird is a DevOps & Platform Engineering studio helping teams build reliable Azure, Kubernetes and CI/CD platforms.">
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root, [data-theme="light"] {
+      /* Type scale */
       --text-xs:   clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
       --text-sm:   clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
       --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
@@ -20,6 +21,7 @@
       --text-xl:   clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
       --text-2xl:  clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
 
+      /* Spacing */
       --space-1: 0.25rem;
       --space-2: 0.5rem;
       --space-3: 0.75rem;
@@ -30,11 +32,13 @@
       --space-12: 3rem;
       --space-16: 4rem;
 
+      /* Radius */
       --radius-sm: 0.375rem;
       --radius-md: 0.5rem;
       --radius-lg: 0.75rem;
       --radius-full: 9999px;
 
+      /* Colors (light) */
       --color-bg: #f7f6f2;
       --color-surface: #f9f8f5;
       --color-surface-2: #fbfbf9;
@@ -83,6 +87,7 @@
       --shadow-md: 0 4px 16px rgba(0,0,0,0.45);
     }
 
+    /* Base */
     *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
@@ -148,6 +153,7 @@
       padding: 0 var(--space-4);
     }
 
+    /* Header */
     header {
       position: sticky;
       top: 0;
@@ -216,7 +222,9 @@
       justify-content: center;
       color: var(--color-text-muted);
       box-shadow: var(--shadow-sm);
-      transition: background var(--transition-interactive), color var(--transition-interactive), box-shadow var(--transition-interactive);
+      transition: background var(--transition-interactive),
+                  color var(--transition-interactive),
+                  box-shadow var(--transition-interactive);
     }
 
     .theme-toggle:hover {
@@ -225,10 +233,72 @@
       box-shadow: var(--shadow-md);
     }
 
+    /* Layout sections */
     main {
       padding: var(--space-10) 0 var(--space-16);
     }
 
+    section {
+      margin-bottom: var(--space-12);
+    }
+
+    section h2 {
+      font-size: var(--text-xl);
+      margin-bottom: var(--space-2);
+      font-family: var(--font-display);
+    }
+
+    section p.section-intro {
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-6);
+      max-width: 52rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: var(--space-4);
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .card {
+      background: var(--color-surface);
+      border-radius: var(--radius-lg);
+      padding: var(--space-4);
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .card h3 {
+      font-size: var(--text-lg);
+      margin-bottom: var(--space-2);
+    }
+
+    .card p {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      margin-top: var(--space-3);
+    }
+
+    .pill {
+      font-size: var(--text-xs);
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--radius-full);
+      background: var(--color-surface-offset);
+      color: var(--color-text-muted);
+      border: 1px solid var(--color-border);
+      white-space: nowrap;
+    }
+
+    /* Hero */
     .hero {
       display: grid;
       grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
@@ -273,7 +343,10 @@
       font-weight: 500;
       border: 1px solid transparent;
       cursor: pointer;
-      transition: background var(--transition-interactive), color var(--transition-interactive), border-color var(--transition-interactive), box-shadow var(--transition-interactive);
+      transition: background var(--transition-interactive),
+                  color var(--transition-interactive),
+                  border-color var(--transition-interactive),
+                  box-shadow var(--transition-interactive);
       text-decoration: none;
     }
 
@@ -346,66 +419,7 @@
       margin-left: -1em;
     }
 
-    section {
-      margin-bottom: var(--space-12);
-    }
-
-    section h2 {
-      font-size: var(--text-xl);
-      margin-bottom: var(--space-2);
-      font-family: var(--font-display);
-    }
-
-    section p.section-intro {
-      color: var(--color-text-muted);
-      margin-bottom: var(--space-6);
-      max-width: 52rem;
-    }
-
-    .grid {
-      display: grid;
-      gap: var(--space-4);
-    }
-
-    .grid-2 {
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    }
-
-    .card {
-      background: var(--color-surface);
-      border-radius: var(--radius-lg);
-      padding: var(--space-4);
-      border: 1px solid var(--color-border);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .card h3 {
-      font-size: var(--text-lg);
-      margin-bottom: var(--space-2);
-    }
-
-    .card p {
-      font-size: var(--text-sm);
-      color: var(--color-text-muted);
-    }
-
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--space-2);
-      margin-top: var(--space-3);
-    }
-
-    .pill {
-      font-size: var(--text-xs);
-      padding: 0.25rem 0.75rem;
-      border-radius: var(--radius-full);
-      background: var(--color-surface-offset);
-      color: var(--color-text-muted);
-      border: 1px solid var(--color-border);
-      white-space: nowrap;
-    }
-
+    /* Experience */
     .experience-list {
       display: grid;
       gap: var(--space-4);
@@ -443,6 +457,7 @@
       margin-top: var(--space-2);
     }
 
+    /* Contact */
     .contact-card {
       display: grid;
       gap: var(--space-4);
@@ -477,6 +492,43 @@
       text-underline-offset: 0.18em;
     }
 
+    /* Location */
+    .location-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+      gap: var(--space-6);
+      align-items: start;
+    }
+
+    .location-card {
+      background: var(--color-surface);
+      border-radius: var(--radius-lg);
+      padding: var(--space-4);
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-sm);
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+    }
+
+    .location-card strong {
+      color: var(--color-text);
+    }
+
+    .location-map {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--color-border);
+      background: var(--color-surface-offset);
+    }
+
+    .location-map iframe {
+      width: 100%;
+      height: 280px;
+      border: 0;
+    }
+
+    /* Footer */
     footer {
       padding: var(--space-6) 0;
       font-size: var(--text-xs);
@@ -484,11 +536,15 @@
       text-align: center;
     }
 
+    /* Responsive */
     @media (max-width: 800px) {
       .hero {
         grid-template-columns: minmax(0, 1fr);
       }
       .contact-card {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .location-grid {
         grid-template-columns: minmax(0, 1fr);
       }
       nav {
@@ -503,14 +559,17 @@
 <header>
   <div class="container header-inner">
     <div class="brand">
-      <svg viewBox="0 0 32 32" aria-label="YZ logo" role="img">
-        <rect x="2" y="2" width="28" height="28" rx="10" fill="none" stroke="currentColor" stroke-width="1.5"/>
-        <path d="M9 11h14l-6 8v4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <svg viewBox="0 0 32 32" aria-label="Tech Bird logo" role="img">
+        <rect x="2" y="2" width="28" height="28" rx="10"
+              fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M9 11h14l-6 8v4"
+              fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
       <div>
-        <div class="brand-mark">Yurii&nbsp;Zozulia</div>
+        <div class="brand-mark">Tech Bird</div>
         <div style="font-size: var(--text-xs); color: var(--color-text-muted);">
-          Senior DevOps Engineer
+          DevOps &amp; Platform Engineering Studio
         </div>
       </div>
     </div>
@@ -519,236 +578,342 @@
       <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#stack">Tech stack</a>
-      <a href="#experience">Experience</a>
+      <a href="#experience">Engagements</a>
+      <a href="#location">Location</a>
       <a href="#contact">Contact</a>
       <button type="button" class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode">
-        <!-- Icon will be injected by script -->
+        <!-- filled by script -->
       </button>
     </nav>
   </div>
 </header>
 
 <main id="main">
+  <!-- Hero -->
   <section class="hero container" id="about">
     <div>
-      <h1 class="hero-heading">Senior DevOps Engineer for Azure‑first, high‑reliability platforms</h1>
+      <h1 class="hero-heading">We build reliable cloud platforms so your teams can ship safely at scale</h1>
       <p class="hero-tagline">
-        I design, build, and run cloud infrastructure that lets engineering teams ship safely at scale.
+        Tech Bird is a boutique DevOps &amp; SRE studio focused on Azure, containers, and delivery automation.
       </p>
       <p class="hero-summary">
-        Hands‑on engineer with deep experience in Azure, Kubernetes, Docker Swarm, CI/CD, and databases,
-        working across large microservice architectures, mission‑critical APIs, and hybrid networks.
-        I help organizations move from fragile snowflake environments to automated, observable platforms.
+        Led by a senior engineer with 11+ years in DevOps, SRE, and software configuration / release engineering,
+        we help product and enterprise teams move from fragile, snowflake environments to automated, observable
+        platforms built on Azure, Kubernetes, Docker Swarm, and robust CI/CD. 
       </p>
       <div class="hero-actions">
-        <!-- TODO: replace email with your real address -->
-        <a class="btn btn-primary" href="mailto:techno.bird00@gmail.com?subject=DevOps%20Engagement">
-          Let’s talk about your platform
+        <!-- TODO: adjust email -->
+        <a class="btn btn-primary" href="mailto:techno.bird00@gmail.com?subject=DevOps%20platform%20review">
+          Request a platform review
         </a>
-        <!-- TODO: replace with a real CV link or GitHub/LinkedIn -->
-        <a class="btn btn-secondary" href="https://www.linkedin.com/in/yurii-zozulia-125bb5123/" target="https://www.linkedin.com/in/yurii-zozulia-125bb5123/" rel="noopener noreferrer">
-          View detailed CV
+        <a class="btn btn-secondary" href="#services">
+          Explore our services
         </a>
       </div>
       <div class="hero-meta">
+        <span>Azure‑first architectures</span>
+        <span>Kubernetes &amp; Docker Swarm</span>
+        <span>CI/CD &amp; release engineering</span>
         <span>Based in Wrocław, PL</span>
-        <span>Remote & EU‑friendly time zones</span>
-        <span>Languages: EN · PL · UA · RU</span>
       </div>
     </div>
 
-    <aside class="hero-card" aria-label="Quick profile">
-      <div class="hero-card-title">Where I add value</div>
+    <aside class="hero-card" aria-label="Where Tech Bird adds value">
+      <div class="hero-card-title">Where we plug into your organisation</div>
       <ul class="hero-list">
-        <li>Designing and running Azure‑based platform infrastructure with strong security and networking.</li>
-        <li>Production‑grade Kubernetes and Docker Swarm for hundreds of microservices.</li>
-        <li>CI/CD pipelines, release automation, and zero‑downtime deployment strategies.</li>
-        <li>Database performance tuning (SQL Server) and caching (Varnish) for high‑traffic systems.</li>
+        <li>Designing and running Azure‑based platforms used by multiple product teams.</li>
+        <li>Building container platforms (AKS, Docker Swarm) for large microservice estates.</li>
+        <li>Implementing CI/CD, release automation, and safe deployment strategies.</li>
+        <li>Improving reliability, performance, and observability of critical APIs and databases.</li>
       </ul>
     </aside>
   </section>
 
+  <!-- Services -->
   <section id="services" class="container">
-    <h2>Consulting & engineering services</h2>
+    <h2>What Tech Bird does</h2>
     <p class="section-intro">
-      I usually work with product companies and enterprises that already run in the cloud, but need to
-      make their delivery safer, faster, and more predictable. But still I would help you to migrate your 
-      on-prem "solutions" to native cloud SaaS/PaaS
+      We help organisations that already run in the cloud – or are on their way there – to stabilise, scale,
+      and simplify their delivery. From Azure landing zones to CI/CD and container platforms, we plug in where
+      you need deep DevOps expertise the most. 
     </p>
 
     <div class="grid grid-2">
       <article class="card">
-        <h3>Azure & cloud infrastructure</h3>
+        <h3>Azure platform &amp; landing zones</h3>
         <p>
           Design and implementation of Azure networks, compute, and PaaS services: VNet, VMSS, AKS,
-          API Management, Front Door, Functions, Managed SQL, and related services.
+          API Management, Front Door, Functions, Managed SQL, and related services. We create secure,
+          well‑governed Azure landing zones your teams can safely build on. 
         </p>
         <div class="pill-row">
           <span class="pill">Azure Landing Zones</span>
-          <span class="pill">Networking & security</span>
-          <span class="pill">High availability</span>
+          <span class="pill">Networking &amp; security</span>
+          <span class="pill">Hybrid connectivity</span>
         </div>
       </article>
 
       <article class="card">
-        <h3>Container platforms</h3>
+        <h3>Container platforms (AKS &amp; Docker Swarm)</h3>
         <p>
-          Building and operating Kubernetes and Docker Swarm clusters for large microservice estates,
-          including service discovery, ingress, observability, and capacity planning.
+          Building and operating Kubernetes and Docker Swarm clusters for large microservice estates, including
+          ingress, service discovery, observability, and capacity planning. We handle upgrades, autoscaling,
+          and runtime standards so teams can focus on features. 
         </p>
         <div class="pill-row">
           <span class="pill">AKS</span>
           <span class="pill">Docker Swarm</span>
-          <span class="pill">Service mesh / gateways</span>
+          <span class="pill">Service discovery &amp; ingress</span>
         </div>
       </article>
 
       <article class="card">
-        <h3>CI/CD & release engineering</h3>
+        <h3>CI/CD &amp; release automation</h3>
         <p>
-          End‑to‑end pipelines from commit to production, blue/green or canary deployments, and
-          reproducible release processes that work across many teams and services.
+          End‑to‑end pipelines from commit to production, blue/green or canary deployments, and reproducible
+          release processes that work across many teams and services. We use Azure DevOps, Jenkins, and
+          Git‑centric workflows to make deployments boring again. 
         </p>
         <div class="pill-row">
           <span class="pill">Azure DevOps</span>
           <span class="pill">Jenkins</span>
-          <span class="pill">Git‑centric workflows</span>
+          <span class="pill">Release engineering</span>
         </div>
       </article>
 
       <article class="card">
-        <h3>Reliability & performance</h3>
+        <h3>API, edge &amp; security architecture</h3>
         <p>
-          Hardening APIs, databases, and caching layers, introducing proper monitoring and alerting,
-          and removing single points of failure from your critical paths.
+          Secure API and edge architectures with Azure API Management, Front Door, and WAF. We separate public
+          APIs from internal backends, enforce consistent policies, and ensure that only the right traffic
+          reaches your services. 
         </p>
         <div class="pill-row">
-          <span class="pill">SLOs & error budgets</span>
-          <span class="pill">Observability</span>
-          <span class="pill">SQL & caching</span>
+          <span class="pill">Azure API Management</span>
+          <span class="pill">Front Door &amp; CDN</span>
+          <span class="pill">WAF policies</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>Reliability, monitoring &amp; incident readiness</h3>
+        <p>
+          Introduction of observability (logs, metrics, traces), definition of SLOs, and tuning of alerts so
+          your teams get signal instead of noise. We help you build clear runbooks and on‑call workflows for
+          critical incidents. 
+        </p>
+        <div class="pill-row">
+          <span class="pill">SLOs &amp; error budgets</span>
+          <span class="pill">Dashboards &amp; alerts</span>
+          <span class="pill">Runbooks</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>Database performance &amp; caching</h3>
+        <p>
+          SQL Server performance tuning and caching strategies (e.g. Varnish) for high‑traffic APIs and web apps.
+          We profile queries, fix indexes, and design caching layers that keep response times stable under load.
+        </p>
+        <div class="pill-row">
+          <span class="pill">SQL Server tuning</span>
+          <span class="pill">Index &amp; query optimisation</span>
+          <span class="pill">Varnish Cache</span>
         </div>
       </article>
     </div>
   </section>
 
+  <!-- Tech stack -->
   <section id="stack" class="container">
     <h2>Tech stack</h2>
     <p class="section-intro">
-      This is a condensed view of the tools and platforms I work with day‑to‑day. For the full list,
-      see the downloadable CV or reach out for a tailored profile.
+      This is a condensed view of the tools and platforms we work with day‑to‑day. For a tailored profile
+      for your organisation, just reach out.
     </p>
 
     <div class="grid grid-2">
       <article class="card">
-        <h3>Cloud & platforms</h3>
+        <h3>Cloud &amp; platforms</h3>
         <div class="pill-row">
           <span class="pill">Microsoft Azure</span>
           <span class="pill">Azure DevOps</span>
           <span class="pill">Azure Functions</span>
           <span class="pill">Azure API Management</span>
-          <span class="pill">Azure Front Door & CDN</span>
+          <span class="pill">Azure Front Door &amp; CDN</span>
+          <span class="pill">Managed SQL</span>
         </div>
       </article>
 
       <article class="card">
-        <h3>Containers & orchestration</h3>
+        <h3>Containers &amp; orchestration</h3>
         <div class="pill-row">
           <span class="pill">Kubernetes (AKS)</span>
-          <span class="pill">Docker & Docker Swarm</span>
-          <span class="pill">Ingress & reverse proxies</span>
+          <span class="pill">Docker</span>
+          <span class="pill">Docker Swarm</span>
+          <span class="pill">Ingress &amp; reverse proxies</span>
         </div>
       </article>
 
       <article class="card">
-        <h3>Databases & caching</h3>
+        <h3>Databases &amp; caching</h3>
         <div class="pill-row">
           <span class="pill">SQL Server</span>
-          <span class="pill">Query tuning & indexing</span>
+          <span class="pill">Query tuning &amp; indexing</span>
           <span class="pill">Varnish Cache</span>
         </div>
       </article>
 
       <article class="card">
-        <h3>CI/CD, IaC & tooling</h3>
+        <h3>CI/CD, IaC &amp; tooling</h3>
         <div class="pill-row">
           <span class="pill">Azure DevOps Pipelines</span>
           <span class="pill">Jenkins</span>
           <span class="pill">Git</span>
-          <span class="pill">Bash & PowerShell</span>
-          <span class="pill">IaC patterns (Ansible/Terraform)</span>
+          <span class="pill">Bash</span>
+          <span class="pill">PowerShell</span>
+          <span class="pill">Infrastructure‑as‑Code patterns</span>
         </div>
       </article>
     </div>
   </section>
 
+  <!-- Engagements / portfolio -->
   <section id="experience" class="container">
-    <h2>Selected experience</h2>
+    <h2>Selected engagements</h2>
     <p class="section-intro">
-      Over my career I have worked for 11+ years as a as a SRE & DevOps Engineer, Software
-      Configuration / Release Engineer, supporting complex enterprise environments and large
-      development organizations.
+      Here are a few examples of where Tech Bird plugs into engineering organisations. These are anonymised
+      but based on real work in complex, enterprise‑grade environments. 
     </p>
 
     <div class="experience-list">
       <article class="experience-item">
         <div class="experience-header">
-          <div class="experience-role">Senior DevOps Engineer</div>
-          <div class="experience-meta">Enterprise / product company</div>
+          <div class="experience-role">Azure platform for multi‑team product organisation</div>
+          <div class="experience-meta">Azure · APIM · Front Door · CI/CD</div>
         </div>
         <p>
-          Responsible for Azure‑based platform used by multiple product teams: container platforms,
-          CI/CD, networking, security controls, observability, and incident response.
+          A product company with several cross‑functional teams had ad‑hoc Azure subscriptions and inconsistent
+          ways to expose APIs. We designed an Azure landing zone, centralised networking, and a standard pattern
+          using API Management and Front Door, plus CI/CD pipelines in Azure DevOps.
+        </p>
+        <p>
+          <strong>Impact:</strong> new services can be onboarded to production in days instead of weeks, with
+          clear security boundaries between public APIs and internal backends.
         </p>
       </article>
 
       <article class="experience-item">
         <div class="experience-header">
-          <div class="experience-role">Software Configuration Engineer / DevOps</div>
-          <div class="experience-meta">Large engineering organization</div>
+          <div class="experience-role">Migration from legacy Docker Swarm to AKS</div>
+          <div class="experience-meta">AKS · Docker Swarm · Observability</div>
         </div>
         <p>
-          Owned build and release pipelines, environment configuration, and deployment tooling,
-          gradually evolving the role into full DevOps and platform engineering.
+          An enterprise running hundreds of microservices on a legacy Swarm cluster needed better scaling and
+          visibility. Tech Bird designed and implemented an AKS‑based platform, including ingress, certificate
+          handling, logging, metrics, and deployment pipelines.
+        </p>
+        <p>
+          <strong>Impact:</strong> safer, incremental rollouts with improved observability, giving teams confidence
+          to ship changes more frequently.
         </p>
       </article>
 
       <article class="experience-item">
         <div class="experience-header">
-          <div class="experience-role">Software Configuration / Release Engineer</div>
-          <div class="experience-meta">Earlier roles</div>
+          <div class="experience-role">SQL performance optimisation &amp; caching for APIs</div>
+          <div class="experience-meta">SQL Server · Varnish · Performance</div>
         </div>
         <p>
-          Implemented and maintained release procedures, packaging and versioning strategies, and
-          coordinated deployments across multiple systems and teams.
+          A high‑traffic API platform was suffering from slow responses during traffic peaks. We profiled SQL Server
+          workloads, optimised queries and indexes, and introduced Varnish caching for common API responses with
+          carefully tuned lifetimes.
+        </p>
+        <p>
+          <strong>Impact:</strong> significantly faster average response times and more stable behaviour during
+          peak loads, with headroom for future growth.
+        </p>
+      </article>
+
+      <article class="experience-item">
+        <div class="experience-header">
+          <div class="experience-role">Release process modernisation</div>
+          <div class="experience-meta">Azure DevOps · Jenkins · Release engineering</div>
+        </div>
+        <p>
+          A large engineering organisation had manual, error‑prone releases and configuration drift between
+          environments. Drawing on years of release engineering practice, we standardised pipelines, introduced
+          configuration management and environment promotion flows, and automated deployment steps. 
+        </p>
+        <p>
+          <strong>Impact:</strong> fewer failed releases, predictable rollbacks, and clearer ownership of
+          configuration across environments.
         </p>
       </article>
     </div>
   </section>
 
+  <!-- Location -->
+  <section id="location" class="container">
+    <h2>Where Tech Bird is based</h2>
+    <p class="section-intro">
+      Tech Bird operates remotely with a physical base in Wrocław, Poland. For on‑site workshops or hybrid
+      engagements, we can work with you across Europe and compatible time zones.
+    </p>
+
+    <div class="location-grid">
+      <div class="location-card">
+        <p><strong>Registered location</strong></p>
+        <p>Tech Bird – DevOps &amp; Platform Engineering Studio</p>
+        <p>
+          Poland, Wrocław<br>
+          Sygnałowa 74B<br>
+          52‑130 Wrocław<br>
+          Poland
+        </p>
+        <p style="margin-top: var(--space-3);">
+          The office is in the south‑eastern part of Wrocław, with convenient access to the city centre and
+          major transport routes.
+        </p>
+      </div>
+
+      <div class="location-map" aria-label="Map to Tech Bird office in Wrocław">
+        <!-- Simple Google Maps embed with the address -->
+        <iframe
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Sygna%C5%82owa%2074B%2C%2052-130%20Wroc%C5%82aw%2C%20Poland&output=embed">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
   <section id="contact" class="container">
     <div class="contact-card">
       <div>
-        <h2>Let’s discuss your infrastructure</h2>
+        <h2>Let’s talk about your platform</h2>
         <p class="section-intro">
-          Whether you need help stabilizing an existing platform, planning a migration to Azure,
-          or building a new delivery pipeline, I’m happy to look at your current setup.
+          Whether you need help stabilising an existing platform, planning a migration to Azure, or building a new
+          delivery pipeline, Tech Bird can review your current setup and propose a pragmatic, incremental path forward.
         </p>
-        <a class="btn btn-secondary" href="mailto:techno.bird00@gmail.com?subject=DevOps%20Consultation">
-          Contact me via email
+        <!-- TODO: adjust email -->
+        <a class="btn btn-secondary" href="mailto:techno.bird00@gmail.com?subject=DevOps%20consultation">
+          Contact Tech Bird via email
         </a>
       </div>
       <div class="contact-details">
-        <!-- TODO: replace with your real contact info / links -->
-        <div><strong>Email:</strong> <a href="mailto:your.email@example.com">techno.bird00@gmail.com</a></div>
-        <div><strong>Location:</strong> Wrocław, Poland</div>
-        <div><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/yurii-zozulia-125bb5123/" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/your-new-devops</a></div>
+        <!-- TODO: replace with real contact info / links -->
+        <div><strong>Email:</strong> <a href="mailto:techno.bird00@gmail.com">techno.bird00@gmail.com</a></div>
+        <div><strong>Location:</strong> Wrocław, Poland (Sygnałowa 74B, 52‑130)</div>
+        <div><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/yurii-zozulia-125bb5123/" target="_blank" rel="noopener noreferrer">linkedin.com/company/tech-bird</a></div>
       </div>
     </div>
   </section>
 </main>
 
 <footer>
-  &copy; <span id="year"></span> Yurii Zozulia · Senior DevOps Engineer
+  &copy; <span id="year"></span> Tech Bird – DevOps &amp; Platform Engineering Studio
 </footer>
 
 <script>
@@ -767,8 +932,9 @@
       }
     }
 
-    let theme = window.matchMedia &&
-                window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    let theme = (window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
+
     root.setAttribute("data-theme", theme);
     setIcon(theme);
 
